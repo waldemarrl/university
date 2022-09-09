@@ -1,0 +1,368 @@
+@font-face {
+  font-family: "Sen-Regular";
+  src: url("Fonts/Sen-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #f5f5f5;
+}
+body {
+  font-family: "Sen-Regular";
+  font-size: 16px;
+  background-color: #ffffff;
+}
+ul {
+  list-style: none;
+}
+.wrapper {
+  max-width: 1100px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.header {
+  background: rgb(255, 255, 255);
+  .wrapper {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header__logo {
+      img {
+        height: 30px;
+      }
+    }
+    .burger {
+      display: none;
+      .container_burger {
+        display: inline-block;
+        cursor: pointer;
+      }
+      .bar1,
+      .bar2,
+      .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: rgb(0, 0, 0);
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+      .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+      }
+
+      .change .bar2 {
+        opacity: 0;
+      }
+
+      .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+      }
+    }
+    .header_time {
+      font-family: "Sen-Regular";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      text-align: center;
+      color: #000000;
+    }
+    .header__nav {
+      .nav_header {
+        ul {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .active_pages {
+            padding-bottom: 8px;
+            border-bottom: 4px solid #000000;
+          }
+          li {
+            cursor: pointer;
+
+            padding: 10px 20px;
+            &:hover {
+              background-color: #7a7a7a;
+            }
+            a {
+              padding: 10px 20px;
+              font-family: "Smythe";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 20px;
+              height: 100%;
+              line-height: 37px;
+              text-align: center;
+              color: #000000;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.about_company {
+  margin-top: 20px;
+  .wrapper {
+    max-width: 1000px;
+  }
+  .company_info {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .company_title {
+    font-family: "Sen-Regular";
+    font-style: normal;
+    font-weight: 0;
+    font-size: 35px;
+    text-align: center;
+    color: #000000;
+  } 
+  .info_first {
+    display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+    .info_first_text {
+      p {
+        font-family: "Sen-Regular";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        text-align: justify;
+        color: #000000;
+      }
+    }
+    .info_first_img {
+     
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+.services {
+  margin-top: 30px;
+  .title_services {
+    font-family: "Sen-Regular";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    text-align: center;
+    color: #000000;
+  }
+  .services_blocks {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    .service_block {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 300px;
+      h2 {
+        font-weight: 500;
+        font-size: 22px;
+        text-align: center;
+        word-wrap: break-word;
+        color: #000000;
+      }
+      p {
+        font-weight: 500;
+        font-size: 16px;
+        text-align: justify;
+        color: #000000;
+      }
+      .services_block_img {
+        width: 300px;
+        height: 300px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+.footer {
+  margin-top: 10px;
+  background-color: #3C3C3C;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .contacts_imgs {
+      img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+      }
+    }
+    .copyright {
+      font-family: "Sen-Regular";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      text-align: center;
+      color: #ffffff;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+}
+@media (max-width: 1034px) {
+  .wrapper {
+    max-width: 800px;
+  }
+  .header .wrapper .header__nav .nav_header ul li a {
+    font-size: 24px;
+  }
+  .header .wrapper .header_time {
+    font-size: 24px;
+  }
+  .about_company {
+    margin-top: 20px;
+    .wrapper {
+      max-width: 800px;
+    }
+  }
+}
+@media (max-width: 790px) {
+  .wrapper {
+    max-width: 650px;
+  }
+  .header {
+    .wrapper {
+      height: 100px;
+      .header__logo {
+        height: 40px;
+        img {
+          width: 90px;
+        }
+      }
+      .burger {
+        display: block;
+        z-index: 100;
+      }
+    }
+
+    position: relative;
+    .header__nav {
+      transform: translateX(-100%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 10;
+      background-color: rgb(255, 255, 255);
+      transition: 0.5s;
+      &.active {
+        transform: translateX(-0%);
+      }
+      .nav_header {
+        ul {
+          margin-top: 90px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: column;
+          .active_pages {
+            width: 80%;
+            text-align: center;
+          }
+          li {
+            padding: 10px 50px;
+            width: 100%;
+            text-align: center;
+            a {
+              display: block;
+              width: 100%;
+              width: 100%;
+              font-family: "Sen-Regular";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 32px;
+              line-height: 37px;
+              text-align: center;
+              color: #fbf8f8;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .about_company .company_title {
+    font-size: 30px;
+  }
+  .services .title_services {
+    font-size: 30px;
+  }
+  .about_company .info_first .info_first_text p {
+    font-size: 16px;
+  }
+  .about_company .wrapper {
+    max-width: 600px;
+  }
+  .footer .wrapper .copyright {
+    font-family: "Sen-Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+  }
+}
+@media (max-width: 500px) {
+  .header {
+    .wrapper {
+      height: 70px;
+      .header__logo {
+        width: 50px;
+        height: 60px;
+        img {
+          height: 60px;
+        }
+      }
+    }
+  }
+  .header .wrapper .header_time {
+    font-family: "Sen-Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #000000;
+  }
+  .wrapper {
+    max-width: 400px;
+  }
+  .about_company .info_first {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 30px;
+  }
+  .about_company .info_first .info_first_text {
+    order: 1;
+  }
+  .footer .wrapper .copyright {
+    font-size: 10px;
+  }
+}

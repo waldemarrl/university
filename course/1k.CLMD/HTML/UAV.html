@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+    rel="icon"
+    type="image/svg"
+    sizes="16x16"
+    href="../IMG/WALD.svg"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/UAV.css" />
+    <title>UAV</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <div class="burger">
+          <div class="container_burger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </div>
+        <div class="header__logo">
+          <a href="../index.html">
+            <img src="../IMG/WALD.svg" alt="logo" />
+          </a>
+        </div>
+        <div class="header__nav">
+          <nav class="nav_header">
+            <ul>
+              <li class="active_pages"><a href="../HTML/UAV.html">UAV</a></li>
+              <li><a href="../HTML/About.html">About</a></li>
+              <li><a href="../HTML/Contacts.html">Contacts</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header_time">
+          <p class="time"></p>
+          <p class="day"></p>
+        </div>
+      </div>
+    </header>
+    <main class="cards_main">
+      <div class="wrapper cards_models">
+      </div>
+      <a href="../HTML/Contacts.html" class="btn_link"
+        >Contact a consultant</a
+      >
+    </main>
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="copyright">Copyright © 2022 WALD Enterprise All Rights Reserved.</div>
+        <div class="contacts_imgs">
+          <a href="https://ru.telegram-store.com/catalog/channels/porscheenthusiast">
+            <img src="../IMG/github.svg" alt="github"/>
+        </a>
+          <a href="mailto:lobanov.v.d@gmail.com">
+            <img src="../IMG/gmail.svg" alt="mail"/>
+          </a>
+          <a href="https://www.facebook.com/dji/">
+            <img src="../IMG/facebook.svg" alt="facebook"/>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="../JS/main.js"></script>
+    <script>
+       var xmlhttp = new XMLHttpRequest();
+   var path = "../XML/data.xml";
+   xmlhttp.open("GET", path, true);
+   xmlhttp.send();
+   xmlhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+         var xmlDoc = this.responseXML;
+         var x = xmlDoc.getElementsByTagName("UAV");
+         for (i = 0; i < x.length; i++) {
+            let name = x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+            let times = x[i].getElementsByTagName("times")[0].childNodes[0].nodeValue;
+            let weight = x[i].getElementsByTagName("weight")[0].childNodes[0].nodeValue;
+            let img = x[i].getElementsByTagName("img")[0].childNodes[0].nodeValue;
+            let src = x[i].getElementsByTagName("src")[0].childNodes[0].nodeValue;
+            let price = x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue;
+            var div = `
+           <div class="cards_model">
+          <div class="img">
+            <img
+              src=${img}
+              alt="car"
+            />
+            <p class="name">${name}</p>
+          </div>
+          <span class="line"> </span>
+          <div class="description">
+            <p>Flight time: <span>${times}</span></p>
+            <p>Weight: <span>${weight}</span></p>
+            <p>Approximate price <span>${price}</span></p>
+          <a href=${src} class="btn">Read more</a>
+        </div>`
+            document.querySelector(".cards_models").innerHTML += div;
+         }
+      }
+   }
+    </script>
+  </body>
+</html>

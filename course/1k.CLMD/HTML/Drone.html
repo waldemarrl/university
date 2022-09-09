@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="icon"
+      type="image/svg"
+      sizes="16x16"
+      href="../IMG/WALD.svg"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/Drone.css" />
+    <title>UAV</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <div class="burger">
+          <div class="container_burger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </div>
+        <div class="header__logo">
+          <a href="../index.html">
+            <img src="../IMG/WALD.svg" alt="logo" />
+          </a>
+        </div>
+        <div class="header__nav">
+          <nav class="nav_header">
+            <ul>
+              <li><a href="../HTML/UAV.html">UAV</a></li>
+              <li><a href="../HTML/About.html">About</a></li>
+              <li><a href="../HTML/Contacts.html">Contacts</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header_time">
+          <p class="time"></p>
+          <p class="day"></p>
+        </div>
+      </div>
+    </header>
+    <main class="all_info">
+      <div class="wrapper">
+        <div class="img">
+        </div>
+        <h1 class="modal_title"><span class="modal"></span></h1>
+      
+        <div class="description">
+          <p>
+        <span class="characteristic"></span>
+          </p>
+          <p>Flight time: <span class="times"></span></p>
+          <p>Weight: <span class="weight"></span></p>
+          <p>
+            Fuel type: <span class="type"></span>
+          </p>
+          <p>
+            Dimensions: <span class="dimensions"></span>
+          </p>
+        </div>
+        <h1 class="price">Approximate price:<span class="price_number"> </span>$</h1>
+      </div>
+    </main>
+    <a href="../HTML/Contacts.html" class="btn_link"
+      >Contact a consultant</a
+    >
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="copyright">Copyright © 2022 WALD Enterprise All Rights Reserved.</div>
+        <div class="contacts_imgs">
+          <a href="https://ru.telegram-store.com/catalog/channels/porscheenthusiast">
+            <img src="../IMG/github.svg" alt="github"/>
+        </a>
+          <a href="mailto:lobanov.v.d@gmail.com">
+            <img src="../IMG/gmail.svg" alt="mail"/>
+          </a>
+          <a href="https://www.facebook.com/dji/">
+            <img src="../IMG/facebook.svg" alt="facebook"/>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="../JS/Drone.js"></script>
+    <script src="../JS/main.js"></script>
+    <script>
+      var params = new URLSearchParams(document.location.search); 
+      var i = params.get("id"); 
+      document.querySelector(".modal").innerHTML = UAV[i].modal; 
+      document.querySelector(
+        ".img"
+      ).innerHTML = `<img src="${UAV[i].img}">`; 
+      document.querySelector(".characteristic").innerHTML =
+      UAV[i].characteristic; 
+      document.querySelector(".times").innerHTML = UAV[i].time; 
+      document.querySelector(".weight").innerHTML = UAV[i].weight; 
+      document.querySelector(".type").innerHTML = UAV[i].type; 
+      document.querySelector(".dimensions").innerHTML = UAV[i].dimensions; 
+      document.querySelector(".price_number").innerHTML = UAV[i].price_number; 
+      document.title = UAV[i].modal; 
+    </script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+   <UAV>
+      <name>
+			Mavic
+      </name>
+      <time>
+			15-20 minutes
+      </time>
+      <weight>
+			400 g.
+      </weight>
+      <price>
+			1000$
+      </price>
+      <src> Drone.html?id=0
+      </src>
+      <img>
+			../IMG/mavic.jpg
+         <img />
+      </img>
+      <UAV>
+         <name>
+				Inspire
+         </name>
+         <times>
+				50-1 hours
+         </times>
+         <weight>
+				1,7 kg
+         </weight>
+         <price>
+				10000$
+         </price>
+         <src> Drone.html?id=1
+         </src>
+         <img>
+				../IMG/inspire.jpg
+         </img>
+      </UAV>
+      <UAV>
+         <name>
+				Hornet
+         </name>
+         <times>
+				18-20 hours
+         </times>
+         <weight>
+				400 kg
+         </weight>
+         <price>
+				130000$
+         </price>
+         <src> Drone.html?id=2
+         </src>
+         <img>
+				../IMG/hornet.jpg
+         </img>
+      </UAV>
+      <UAV>
+         <name>
+				Rosa
+         </name>
+         <times>
+				3-4 hours
+         </times>
+         <weight>
+				25 kg
+         </weight>
+         <price>
+				33000$
+         </price>
+         <src> Drone.html?id=3
+         </src>
+         <img>
+				../IMG/rosa.jpg
+         </img>
+      </UAV>     
+   </UAV>
+</root>

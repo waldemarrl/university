@@ -1,0 +1,332 @@
+@font-face {
+  font-family: "Sen-Regular";
+  src: url("Fonts/Sen-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #f5f5f5;
+}
+
+body {
+  font-family: "Sen-Regular";
+  font-size: 16px;
+  background-color: #ffffff;
+}
+
+ul {
+  list-style: none;
+}
+
+.wrapper {
+  max-width: 1100px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  background: rgb(255, 255, 255);
+}
+.header .wrapper {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .wrapper .header__logo img {
+  height: 30px;
+}
+.header .wrapper .burger {
+  display: none;
+}
+.header .wrapper .burger .container_burger {
+  display: inline-block;
+  cursor: pointer;
+}
+.header .wrapper .burger .bar1,
+.header .wrapper .burger .bar2,
+.header .wrapper .burger .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: rgb(0, 0, 0);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.header .wrapper .burger .change .bar1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+.header .wrapper .burger .change .bar2 {
+  opacity: 0;
+}
+.header .wrapper .burger .change .bar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+.header .wrapper .header_time {
+  font-family: "Sen-Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: #000000;
+}
+.header .wrapper .header__nav .nav_header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .wrapper .header__nav .nav_header ul .active_pages {
+  padding-bottom: 8px;
+  border-bottom: 4px solid #000000;
+}
+.header .wrapper .header__nav .nav_header ul li {
+  cursor: pointer;
+  padding: 10px 20px;
+}
+.header .wrapper .header__nav .nav_header ul li:hover {
+  background-color: #a7a7a7;
+}
+.header .wrapper .header__nav .nav_header ul li a {
+  padding: 10px 20px;
+  font-family: "Sen-Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  height: 100%;
+  line-height: 37px;
+  text-align: center;
+  color: #000000;
+}
+
+.btn_link {
+  display: table;
+  margin: 30px auto;
+  padding: 12px 23px;
+  background: #a7a7a7;
+  border-radius: 40px;
+  color:rgb(0, 0, 0);
+}
+
+.all_info {
+  margin-top: 40px;
+}
+.all_info .wrapper .price {
+  margin-top: 20px;
+  margin-left: 30px;
+  font-weight: 400;
+  color: #000000;
+}
+.all_info .wrapper h2 {
+  font-family: "Sen-Regular";
+  font-style: normal;
+  color: #000000;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.all_info .wrapper h2 span {
+  color: #000000;
+}
+.all_info .wrapper .modal_title {
+  font-family: "Sen-Regular";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+.all_info .wrapper .description p {
+  padding: 10px 0;
+  color: #000000;
+  font-size: 18px;
+}
+.all_info .wrapper .description p span {
+  color: rgb(0, 0, 0);
+}
+.all_info .wrapper .img {
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 500px;
+}
+.all_info .wrapper .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.footer {
+  margin-top: 10px;
+  background-color: #3C3C3C;
+}
+.footer .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .wrapper .contacts_imgs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.footer .wrapper .contacts_imgs img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.footer .wrapper .copyright {
+  font-family: "Sen-Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  text-align: center;
+  color: #ffffff;
+}
+
+
+@media (max-width: 1034px) {
+  .wrapper {
+    max-width: 800px;
+  }
+
+  .header .wrapper .header__nav .nav_header ul li a {
+    font-size: 24px;
+  }
+
+  .header .wrapper .header_time {
+    font-size: 24px;
+  }
+
+  .footer {
+    margin-top: 60px;
+    background-color: #3C3C3C;
+  }
+}
+@media (max-width: 790px) {
+  .all_info .wrapper h2 {
+    font-size: 20px;
+  }
+
+  .description p {
+    font-size: 16px;
+  }
+
+  .all_info .wrapper .img {
+    height: 300px;
+  }
+
+  .all_info .wrapper .price {
+    font-size: 25px;
+    margin-left: 0px;
+  }
+
+  .wrapper {
+    max-width: 650px;
+  }
+
+  .header {
+    position: relative;
+  }
+  .header .wrapper {
+    height: 100px;
+  }
+  .header .wrapper .header__logo {
+    height: 40px;
+  }
+  .header .wrapper .header__logo img {
+    width: 90px;
+  }
+  .header .wrapper .burger {
+    display: block;
+    z-index: 100;
+  }
+  .header .header__nav {
+    transform: translateX(-100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background-color: rgb(255, 255, 255);
+    transition: 0.5s;
+  }
+  .header .header__nav.active {
+    transform: translateX(0%);
+  }
+  .header .header__nav .nav_header ul {
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  .header .header__nav .nav_header ul .active_pages {
+    border: 3px solid #000000;
+  }
+  .header .header__nav .nav_header ul li {
+    padding: 10px 20px;
+  }
+  .header .header__nav .nav_header ul li a {
+    width: 100%;
+    font-family: "Sen-Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 37px;
+    text-align: center;
+    color: #000000;
+  }
+
+  .form_title_more {
+    font-size: 20px;
+  }
+
+  .footer .wrapper .copyright {
+    font-family: "Sen-Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+  }
+
+  .footer {
+    margin-top: 70px;
+    background-color: #3C3C3C;
+  }
+
+}
+@media (max-width: 500px) {
+  .header .wrapper {
+    height: 70px;
+  }
+  .header .wrapper .header__logo {
+    width: 50px;
+    height: 60px;
+  }
+  .header .wrapper .header__logo img {
+    height: 60px;
+  }
+
+  .header .wrapper .header_time {
+    font-family: "Sen-Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    color: #000000;
+  }
+
+  .wrapper {
+    max-width: 400px;
+  }
+
+  .footer .wrapper .copyright {
+    font-size: 10px;
+  }
+}
